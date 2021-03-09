@@ -16,8 +16,20 @@ namespace Nelson001.VISTA
         public FrmUsuarios()
         {
             InitializeComponent();
+           
         }
+        void carga()
+        {
+            using (programacionEntities db = new programacionEntities())
+            {
 
+                var Lista = db.UserList.ToList();
+                foreach (var iteracion in Lista)
+                {
+                    dataGridView1.Rows.Add(iteracion.NombreUsuario,iteracion.Apellido,iteracion.Edad);
+                }
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {   try { 
             using (programacionEntities db = new programacionEntities())
@@ -39,6 +51,7 @@ namespace Nelson001.VISTA
             {
                 MessageBox.Show(EX.ToString());
             }
+            carga();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -63,19 +76,32 @@ namespace Nelson001.VISTA
             {
                 MessageBox.Show(EX.ToString());
             }
+            carga();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (programacionEntities db = new programacionEntities())
+            try
             {
-                
-                UserList userList = db.UserList.Where(x => x.id == 6).Select(x => x).FirstOrDefault();
+                using (programacionEntities db = new programacionEntities())
+                {
+                    int update = Convert.ToInt32(txtid);
+                    UserList userList = db.UserList.Where(x => x.id == update).Select(x => x).FirstOrDefault();
 
-                userList.NombreUsuario = "Juan";
-                db.SaveChanges();
+                    userList.NombreUsuario = txtNombre.Text;
+                    userList.Apellido = txtEdad.Text;
+                    userList.Edad = Convert.ToInt32(txtEdad.Text);
+                    userList.pass = txtPass.Text;
+                    db.SaveChanges();
+                }
+            } catch (Exception EX)
+            {
+                MessageBox.Show(EX.ToString());
+
             }
-
+            
+               
+           
 
 
 
