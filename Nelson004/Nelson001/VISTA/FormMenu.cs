@@ -59,6 +59,12 @@ namespace Nelson001.VISTA
 
             frmO.Show();
         }
+
+        private void cRUDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios frmUsuarios = new FrmUsuarios();
+            frmUsuarios.Show();
+        }
     }
     
 }

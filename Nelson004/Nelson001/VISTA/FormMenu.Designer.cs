@@ -34,10 +34,12 @@ namespace Nelson001.VISTA
             this.clikcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.areglosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cLICKPARAACToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.mATEMATICASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.coneccionesBDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cRUDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +48,8 @@ namespace Nelson001.VISTA
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem,
             this.areglosToolStripMenuItem,
-            this.mATEMATICASToolStripMenuItem});
+            this.mATEMATICASToolStripMenuItem,
+            this.coneccionesBDToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(724, 24);
@@ -84,15 +87,6 @@ namespace Nelson001.VISTA
             this.cLICKPARAACToolStripMenuItem.Text = "CLICK PARA ACCEDER";
             this.cLICKPARAACToolStripMenuItem.Click += new System.EventHandler(this.cLICKPARAACToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(677, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            // 
             // mATEMATICASToolStripMenuItem
             // 
             this.mATEMATICASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -116,6 +110,30 @@ namespace Nelson001.VISTA
             this.restaToolStripMenuItem.Text = "Resta";
             this.restaToolStripMenuItem.Click += new System.EventHandler(this.restaToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(677, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
+            // coneccionesBDToolStripMenuItem
+            // 
+            this.coneccionesBDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cRUDToolStripMenuItem});
+            this.coneccionesBDToolStripMenuItem.Name = "coneccionesBDToolStripMenuItem";
+            this.coneccionesBDToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.coneccionesBDToolStripMenuItem.Text = "Conecciones BD";
+            // 
+            // cRUDToolStripMenuItem
+            // 
+            this.cRUDToolStripMenuItem.Name = "cRUDToolStripMenuItem";
+            this.cRUDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cRUDToolStripMenuItem.Text = "CRUD";
+            this.cRUDToolStripMenuItem.Click += new System.EventHandler(this.cRUDToolStripMenuItem_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,7 +144,7 @@ namespace Nelson001.VISTA
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenu";
-            this.Text = "Form2";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.FormMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -146,5 +164,7 @@ namespace Nelson001.VISTA
         private System.Windows.Forms.ToolStripMenuItem mATEMATICASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sumasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem coneccionesBDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cRUDToolStripMenuItem;
     }
 }

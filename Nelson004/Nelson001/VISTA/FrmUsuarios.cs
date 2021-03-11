@@ -16,9 +16,22 @@ namespace Nelson001.VISTA
         public FrmUsuarios()
         {
             InitializeComponent();
-           
+            carga();
+            Clear();
+            
+
+        }
+        void Clear()
+        {// para borrar los datos ingresados en las cajas de texto 
+            txtid.Clear();
+            txtNombre.Clear();
+            // otra forma de hacer limpiesa de datos en las cajas de texto 
+            txtApellido.Text = "";
+            txtEdad.Clear();
+            txtPass.Clear();
         }
         void carga()
+
         {
             using (programacionEntities db = new programacionEntities())
             {
@@ -26,7 +39,7 @@ namespace Nelson001.VISTA
                 var Lista = db.UserList.ToList();
                 foreach (var iteracion in Lista)
                 {
-                    dataGridView1.Rows.Add(iteracion.NombreUsuario,iteracion.Apellido,iteracion.Edad);
+                    dtgListaUsuarios.Rows.Add(iteracion.id, iteracion.NombreUsuario, iteracion.Apellido, iteracion.Edad);
                 }
             }
         }
@@ -52,6 +65,7 @@ namespace Nelson001.VISTA
                 MessageBox.Show(EX.ToString());
             }
             carga();
+            Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,6 +91,7 @@ namespace Nelson001.VISTA
                 MessageBox.Show(EX.ToString());
             }
             carga();
+            Clear();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -99,12 +114,34 @@ namespace Nelson001.VISTA
                 MessageBox.Show(EX.ToString());
 
             }
-            
-               
-           
+            carga();
+            Clear();
+
+
+
 
 
 
         }
+
+        private void dtgListaUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String id = dtgListaUsuarios.CurrentRow.Cells[0].Value.ToString();
+            String Nombre = dtgListaUsuarios.CurrentRow.Cells[1].Value.ToString();
+            String Apellido = dtgListaUsuarios.CurrentRow.Cells[2].Value.ToString();
+            String Edad = dtgListaUsuarios.CurrentRow.Cells[3].Value.ToString();
+
+
+            txtid.Text = id;
+            txtNombre.Text = Nombre;
+            txtApellido.Text = Apellido;
+            txtEdad.Text = Edad;
+        }
+
+        private void FrmUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

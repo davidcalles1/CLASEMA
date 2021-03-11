@@ -57,3 +57,4 @@ C:\Users\nelson\OneDrive\Documentos\GitHub\CLASEMA\Nelson004\Nelson001\obj\Debug
 C:\Users\nelson\OneDrive\Documentos\GitHub\CLASEMA\Nelson004\Nelson001\obj\Debug\Nelson001.csproj.CopyComplete
 C:\Users\nelson\OneDrive\Documentos\GitHub\CLASEMA\Nelson004\Nelson001\obj\Debug\Nelson001.exe
 C:\Users\nelson\OneDrive\Documentos\GitHub\CLASEMA\Nelson004\Nelson001\obj\Debug\Nelson001.pdb
+C:\Users\nelson\OneDrive\Documentos\GitHub\CLASEMA\Nelson004\Nelson001\obj\Debug\Nelson001.VISTA.FrmFoco.resources
